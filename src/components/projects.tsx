@@ -69,6 +69,7 @@ export default function Projects() {
           bgGradient="linear(to-r, #3e64ff, #1dd3bd)"
           bgClip="text"
           data-aos="fade-up"
+          fontWeight = "700"
         >
           Projects
         </Heading>

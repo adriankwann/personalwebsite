@@ -90,7 +90,7 @@ export default function About() {
           color="transparent"
           bgGradient="linear(to-r, #3e64ff, #1dd3bd)"
           bgClip="text"
-          fontWeight="400"
+          fontWeight="700"
         >
           About
         </Heading>

@@ -1,6 +1,7 @@
 import React from "react";
-import { Divider, Box, HStack, Link } from "@chakra-ui/react";
+import { Divider, Box, HStack, Link, Button } from "@chakra-ui/react";
 import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { motion } from "framer-motion";
 import NextLink from "next/link";
 
 const Header: React.FC = () => {
@@ -9,16 +10,15 @@ const Header: React.FC = () => {
       <header style={headerStyle}>
         <HStack justifyContent="space-between" width="100%" paddingX={8}>
           <Box flex="1" textAlign="left">
-            <NextLink href="/" passHref>
-              <Link href="/" _hover={{ textDecoration: "none" }}>
-                <h1 style={headingStyle}>Adrian Kwan</h1>
-              </Link>
-            </NextLink>
+            <Link as={NextLink} href="/" _hover={{ textDecoration: "none" }}>
+              <h1 style={headingStyle}>Adrian Kwan</h1>
+            </Link>
           </Box>
           <HStack spacing={4}>
             <Link href="https://github.com/adriankwann" isExternal>
               <FaGithub size={24} />
             </Link>
+
             <Link href="https://twitter.com/adriankwann" isExternal>
               <FaTwitter size={24} />
             </Link>

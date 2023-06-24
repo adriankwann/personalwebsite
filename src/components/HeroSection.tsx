@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { HStack, Image } from "@chakra-ui/react";
-import photo from "./assets/IMG_1048.jpg";
 import { Link as ScrollLink } from "react-scroll";
 import AOS from "aos";
 import "aos/dist/aos.css";

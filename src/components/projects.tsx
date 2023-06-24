@@ -1,12 +1,8 @@
 import React, { useEffect } from "react";
 import { VStack, HStack, Box, Heading, Text } from "@chakra-ui/react";
 import ProjectCard from "./projectcard";
-import dBridge from "./assets/dbridge.png";
-import babpoll from "./assets/babpoll.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import saas from "./assets/saas.png";
-import zetta from "./assets/zetta.png";
 
 export default function Projects() {
   useEffect(() => {

@@ -107,7 +107,7 @@ export default function HeroSection() {
             {/* Image on the right */}
             <div className="w-1/3" data-aos="fade-up">
               <Image
-                src="https://lh3.googleusercontent.com/pw/AJFCJaV5FhO8neUlxdG1WGyDt519ST7I_G4Y1KngWZKskQ4SFiWo7cNX2i6_fQh5IX64Q8YguElaw_rqApN_qlho1HHl8U1OyJBMTKlAnaL-dEPwG0nUZSgPZRwPq281R1p_kHBheZ-nXZY7vJrodvsK8iaH8E8DN6WEy9gN3rr5hK3Fadwxen5RJB_e9pPCZ7U8dfQAEpaHijOAtqa6gnAzulfQhI7zOB2Z_Do-Ssv_iGpq6zmLX_q8z-8hJrlrA4hhNl4fN2fGl4k1shQhDdlvMGcCEEGFLso-DoEIYzKCsKV2kLsTIEzq9_3nkF665vKGtBCEcqZ5f8dXXdL1xIo9TUEiAKgnifsvE58MdF6kuwd0QV7CHE1VSnSlb6QYWuYjeHyuAvNx02FjRQ_Xtcv7mNKRyCqWXm-iekzdL6RQgBVivKQOqRc5YzSoJpf3yu3E3GUVpiJI9Y8mbryYcYIKTt7pf6XI4DoPdUn6zioi92D_4t-2FtcbLGiZoGj8pHkIY5UAMk1h4z6R9T5fHAkuHZTSB8kry2lBFlHaH76LHdNMk6g7_Vjd_Cnzcy251p2mKuF4QB0OKzuBVKv0l1kMJ-lCStWcMm4zDT5LO-LH13DPTH5h9s2ESUPkHzrZcAftC8L3NEawkmrcn-pYENdmLgtr-xchGtkmvBjo7sLrk-r3bewzU15-99ESC_1EYy3mpsE4H0GtcKYn3yT2e7mCrAehdPmIqpcfmgn1MlulD03EqCEOAgrAhZnXr9JKKZNamXZXXtxwRN9VzBQ-W78xNKaInfNWWNdSJuq8G1YTXhcSNFB6Pd-hCCOlX69TCTkv6Sxan4eI_DkEQjAA6qA1sRY4NCY5dvbUzCGEG5FHSCbrsI4XqtpYdEf5gL87NTGIUrAsqjC3KM78_q9sz94ZzLOMWIkZmEhmvyjsjWQcFAEekINrzYcMzlOTui0caNhOs10CE7jp26TfyqknU8_2ZbHIs5Y2QbxqEbyi1km6jV3OZJRtg5Zx6bF7Rn61HKBrJY9CYfKEJzHnvf2YGxWPLgbRooOb5ToIbF6IdKyhg2qZRG8W7E57iTikcUVT3ewsBORfsb63QMKOMe_1QntAJc0FhurJe2isUTx8M3DdT4gZGMAtwT6Sh4nJLunztJGknAOq7USJKgAVv8c=w1312-h1295-s-no?authuser=0"
+                src="https://photos.app.goo.gl/Wsif9g5Qwk5pKguV6"
                 alt="Headshot"
                 maxWidth="300px"
                 maxHeight="500px"

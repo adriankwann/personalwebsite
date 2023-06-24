@@ -60,13 +60,13 @@ export default function Projects() {
       alignItems="flex-start" // Align items to the top
       justifyContent="center"
       height="auto"
-      marginTop="50px"
+      marginTop="10vh"
     >
       <VStack spacing="20px" align="center">
         <Heading
           size="lg"
           color="transparent"
-          bgGradient="linear(to-r, #3e64ff, #1dd3bd)"
+          bgGradient="linear-gradient(to right, rgba(29, 211, 189, 0.5), rgba(62, 100, 255, 0.5))"
           bgClip="text"
           data-aos="fade-up"
           fontWeight="700"

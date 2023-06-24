@@ -1,14 +1,18 @@
 import React, { useEffect } from "react";
-import { Box, Heading, Stack, Text, Link, Image } from "@chakra-ui/react";
+import { Box, Heading, Stack, Text, Link, Image, useDisclosure } from "@chakra-ui/react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ClassCard from "./classcard";
 import { motion } from "framer-motion";
+import ResumeModal from "./resumemodal";
+import Wave from "react-wavify";
 
 export default function About() {
   useEffect(() => {
     AOS.init({ duration: 800 });
   }, []);
+
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   const companies = [
     {
@@ -75,7 +79,27 @@ export default function About() {
   }
 
   return (
-    <Box padding="0 10%">
+
+    <Box >
+         <Wave mask="url(#mask)" fill="url(#gradient)">
+              <defs>
+                <linearGradient id="gradient" gradientTransform="rotate(90)">
+                  <stop offset="0" stopColor="rgba(255, 255, 255, 1)" />
+                  <stop offset="0.3" stopColor="rgba(62, 100, 255, 0.4)" />
+                  <stop offset="0.7" stopColor="rgba(29, 211, 189, 0.4)" />
+                  <stop offset="1" stopColor="rgba(255, 255, 255, 1)" />
+                </linearGradient>
+                <mask id="mask">
+                  <rect
+                    x="0"
+                    y="0"
+                    width="2000"
+                    height="200"
+                    fill="url(#gradient)"
+                  />
+                </mask>
+              </defs>
+            </Wave>
       <Box
         display="flex"
         alignItems="center"
@@ -88,47 +112,65 @@ export default function About() {
         <Heading
           size="lg"
           color="transparent"
-          bgGradient="linear(to-r, #3e64ff, #1dd3bd)"
+          bgGradient="linear-gradient(to right, rgba(29, 211, 189, 0.5), rgba(62, 100, 255, 0.5))"
           bgClip="text"
           fontWeight="700"
         >
           About
         </Heading>
       </Box>
-      <Box
-        display="flex"
-        flexDirection="column"
-        alignItems="center"
-        justifyContent="center"
-        textAlign="center"
-        marginBottom="25px"
-        data-aos="fade-up"
-        marginTop="50px"
-        maxWidth="50%"
-        marginLeft="auto"
-        marginRight="auto"
-      >
-        <Text fontSize="lg" fontWeight="300">
-          My name is Adrian Kwan and I&apos;m currently studying Computer Science @{" "}
-          <br></br>
-          <Text as="mark" className="highlight">
-            UC Berkeley
-          </Text>
-          . I am an aspiring full-stack{" "}
-          <Text as="mark" className="highlight">
-            software engineer
-          </Text>{" "}
-          and tech{" "}
-          <Text as="mark" className="highlight">
-            entrepreneur
-          </Text>
-          .
-        </Text>
-        <Text fontSize="lg" fontWeight="300">
-          I&apos;m interested in LLMs, computer vision, zero knowledge proofs, and
-          decentralized finance.
-        </Text>
-      </Box>
+<Box
+  display="flex"
+  flexDirection="column"
+  alignItems="center"
+  justifyContent="center"
+  marginBottom="25px"
+  data-aos="fade-up"
+  marginTop="50px"
+  maxWidth="40%"
+  marginLeft="auto"
+  marginRight="auto"
+>
+  <div style={{ textAlign: "center", marginBottom: "20px" }}>
+    <Text fontSize="2xl" fontWeight="300">
+      My name is Adrian Kwan and I&apos;m currently studying Computer Science @{" "}
+      <Text as="mark" className="highlight">
+        UC Berkeley
+      </Text>
+      . <br></br>I am an aspiring full-stack{" "}
+      <Text as="mark" className="highlight">
+        software engineer
+      </Text>{" "}
+      and tech{" "}
+      <Text as="mark" className="highlight">
+        entrepreneur
+      </Text>
+      .
+    </Text>
+    <Text fontSize="2xl" fontWeight="300">
+      I&apos;m interested in LLMs, computer vision, zero knowledge proofs, and
+      decentralized finance.
+    </Text>
+  </div>
+
+  <Box textAlign="center" marginTop="25px">
+  <motion.button 
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.9 }}
+    style={{
+        background: "linear-gradient(to right, rgba(29, 211, 189, 0.3), rgba(62, 100, 255, 0.3))",
+        display: "flex",
+        borderRadius: "25px",
+        padding: "10px 20px",
+        justifyContent: "center",
+    }}
+    onClick={onOpen}
+>
+    <Text fontSize="xl" fontWeight="400"> View Resume </Text>
+</motion.button>
+
+  </Box>
+</Box>
 
       <Box
         display="flex"
@@ -137,7 +179,7 @@ export default function About() {
         height="auto"
         marginBottom="25px"
         data-aos="fade-up"
-        marginTop="50px"
+        marginTop="15vh"
       >
         <Heading size="md" color="black" textAlign="center" fontWeight="100">
           Previous Companies
@@ -218,6 +260,7 @@ export default function About() {
             </Stack>
           ))}
         </Stack>
+        <ResumeModal isOpen={isOpen} onClose={onClose} />
       </Box>
     </Box>
   );

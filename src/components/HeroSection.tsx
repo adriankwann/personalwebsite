@@ -11,7 +11,8 @@ export default function HeroSection() {
   }, []);
   const bulletPoints = [
     "Computer Science Major @ UC Berkeley",
-    "SWE Intern @ FlowGPT, Zettablock",
+    "Full Stack SWE Intern @ FlowGPT",
+    "SWE Intern @ Zettablock",
     "Developer, Governance @ Blockchain at Berkeley",
     "Previous: DS Intern @ Circle",
   ];
@@ -56,7 +57,7 @@ export default function HeroSection() {
           <HStack spacing={20} align="start" data-aos="fade-up">
             {/* Text content on the left */}
             <div className="w-auto pr-8 text-left">
-              <Heading fontWeight="700" fontSize="5xl">
+              <Heading fontWeight="700" fontSize="6xl">
                 Welcome to my website!
               </Heading>
               <p

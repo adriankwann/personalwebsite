@@ -4,6 +4,7 @@ import {
   Center,
   Heading,
   Spinner,
+  Divider
 } from "@chakra-ui/react";
 import Head from "next/head";
 import Header from "../components/header";
@@ -12,7 +13,6 @@ import React, { useState, useEffect } from "react";
 import About from "../components/about";
 import Projects from "../components/projects";
 import Footer from "../components/footer";
-import Wave from "react-wavify";
 import "@fontsource/lato/100.css";
 import "@fontsource/lato/300.css";
 import "@fontsource/lato/400.css";
@@ -77,7 +77,7 @@ export default function Home() {
             as="h1"
             size="lg"
             mb={4}
-            fontWeight="bold"
+            fontWeight="300"
             color="transparent"
             bgGradient="linear(to-r, purple.500, cyan.500)"
             bgClip="text"
@@ -92,28 +92,10 @@ export default function Home() {
           <Header />
           <HeroSection />
           <div id="content-wrapper">
-            <Wave mask="url(#mask)" fill="url(#gradient)">
-              <defs>
-                <linearGradient id="gradient" gradientTransform="rotate(90)">
-                  <stop offset="0" stopColor="rgba(255, 255, 255, 1)" />
-                  <stop offset="0.3" stopColor="rgba(62, 100, 255, 0.4)" />
-                  <stop offset="0.7" stopColor="rgba(29, 211, 189, 0.4)" />
-                  <stop offset="1" stopColor="rgba(255, 255, 255, 1)" />
-                </linearGradient>
-                <mask id="mask">
-                  <rect
-                    x="0"
-                    y="0"
-                    width="2000"
-                    height="200"
-                    fill="url(#gradient)"
-                  />
-                </mask>
-              </defs>
-            </Wave>
             <div id="about-section">
               <About />
             </div>
+            <Divider orientation="horizontal" />
             <div id="projects-section">
               <Projects />
             </div>

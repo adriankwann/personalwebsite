@@ -158,6 +158,7 @@ export default function About() {
           {/* Logos with captions */}
           {companies.map((company) => (
             <motion.button
+                key={company.logo} 
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               style={{
@@ -172,7 +173,7 @@ export default function About() {
                 isExternal
                 _hover={{ textDecoration: "none" }}
               >
-                <Box key={company.logo} textAlign="center">
+                <Box textAlign="center">
                   <Image src={company.logo} alt="Company logo" height="50px" />
                   <Text fontSize="sm" textAlign="center" marginTop="10px">
                     {company.caption}

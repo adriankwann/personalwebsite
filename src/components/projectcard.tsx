@@ -38,7 +38,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <Stack mt="6" spacing="3" align="center" justifyContent="center">
           <Image
             src={typeof image === "string" ? image : image.src}
-            alt="Green double couch with wooden legs"
+            alt="Project Image"
             borderRadius="lg"
             maxHeight="150px"
             maxWidth="35vh"

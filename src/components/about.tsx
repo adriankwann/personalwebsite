@@ -109,8 +109,7 @@ export default function About() {
         marginRight="auto"
       >
         <Text fontSize="lg" fontWeight="300">
-          My name is Adrian Kwan and I'm currently studying Computer Science @
-          {"    "}
+          My name is Adrian Kwan and I'm currently studying Computer Science @ <br></br>
           <Text as="mark" className="highlight">
             UC Berkeley
           </Text>
@@ -125,8 +124,7 @@ export default function About() {
           .
         </Text>
         <Text fontSize="lg" fontWeight="300">
-          I'm interested in LLMs, computer vision, zero knowledge proofs, and
-          decentralized finance.
+          I'm interested in LLMs, computer vision, zero knowledge proofs, and decentralized finance.
         </Text>
       </Box>
 

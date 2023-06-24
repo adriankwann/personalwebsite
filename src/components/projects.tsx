@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { VStack, HStack, Box, Heading, Text } from "@chakra-ui/react";
+import { VStack, HStack, Box, Heading} from "@chakra-ui/react";
 import ProjectCard from "./projectcard";
 import AOS from "aos";
 import "aos/dist/aos.css";

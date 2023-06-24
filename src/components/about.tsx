@@ -1,5 +1,13 @@
 import React, { useEffect } from "react";
-import { Box, Heading, Stack, Text, Link, Image, useDisclosure } from "@chakra-ui/react";
+import {
+  Box,
+  Heading,
+  Stack,
+  Text,
+  Link,
+  Image,
+  useDisclosure,
+} from "@chakra-ui/react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ClassCard from "./classcard";
@@ -79,27 +87,20 @@ export default function About() {
   }
 
   return (
-
-    <Box >
-         <Wave mask="url(#mask)" fill="url(#gradient)">
-              <defs>
-                <linearGradient id="gradient" gradientTransform="rotate(90)">
-                  <stop offset="0" stopColor="rgba(255, 255, 255, 1)" />
-                  <stop offset="0.3" stopColor="rgba(62, 100, 255, 0.4)" />
-                  <stop offset="0.7" stopColor="rgba(29, 211, 189, 0.4)" />
-                  <stop offset="1" stopColor="rgba(255, 255, 255, 1)" />
-                </linearGradient>
-                <mask id="mask">
-                  <rect
-                    x="0"
-                    y="0"
-                    width="2000"
-                    height="200"
-                    fill="url(#gradient)"
-                  />
-                </mask>
-              </defs>
-            </Wave>
+    <Box>
+      <Wave mask="url(#mask)" fill="url(#gradient)">
+        <defs>
+          <linearGradient id="gradient" gradientTransform="rotate(90)">
+            <stop offset="0" stopColor="rgba(255, 255, 255, 1)" />
+            <stop offset="0.3" stopColor="rgba(62, 100, 255, 0.4)" />
+            <stop offset="0.7" stopColor="rgba(29, 211, 189, 0.4)" />
+            <stop offset="1" stopColor="rgba(255, 255, 255, 1)" />
+          </linearGradient>
+          <mask id="mask">
+            <rect x="0" y="0" width="2000" height="200" fill="url(#gradient)" />
+          </mask>
+        </defs>
+      </Wave>
       <Box
         display="flex"
         alignItems="center"
@@ -119,58 +120,62 @@ export default function About() {
           About
         </Heading>
       </Box>
-<Box
-  display="flex"
-  flexDirection="column"
-  alignItems="center"
-  justifyContent="center"
-  marginBottom="25px"
-  data-aos="fade-up"
-  marginTop="50px"
-  maxWidth="40%"
-  marginLeft="auto"
-  marginRight="auto"
->
-  <div style={{ textAlign: "center", marginBottom: "20px" }}>
-    <Text fontSize="2xl" fontWeight="300">
-      My name is Adrian Kwan and I&apos;m currently studying Computer Science @{" "}
-      <Text as="mark" className="highlight">
-        UC Berkeley
-      </Text>
-      . <br></br>I am an aspiring full-stack{" "}
-      <Text as="mark" className="highlight">
-        software engineer
-      </Text>{" "}
-      and tech{" "}
-      <Text as="mark" className="highlight">
-        entrepreneur
-      </Text>
-      .
-    </Text>
-    <Text fontSize="2xl" fontWeight="300">
-      I&apos;m interested in LLMs, computer vision, zero knowledge proofs, and
-      decentralized finance.
-    </Text>
-  </div>
+      <Box
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        justifyContent="center"
+        marginBottom="25px"
+        data-aos="fade-up"
+        marginTop="50px"
+        maxWidth="40%"
+        marginLeft="auto"
+        marginRight="auto"
+      >
+        <div style={{ textAlign: "center", marginBottom: "20px" }}>
+          <Text fontSize="2xl" fontWeight="300">
+            My name is Adrian Kwan and I&apos;m currently studying Computer
+            Science @{" "}
+            <Text as="mark" className="highlight">
+              UC Berkeley
+            </Text>
+            . <br></br>I am an aspiring full-stack{" "}
+            <Text as="mark" className="highlight">
+              software engineer
+            </Text>{" "}
+            and tech{" "}
+            <Text as="mark" className="highlight">
+              entrepreneur
+            </Text>
+            .
+          </Text>
+          <Text fontSize="2xl" fontWeight="300">
+            I&apos;m interested in LLMs, computer vision, zero knowledge proofs,
+            and decentralized finance.
+          </Text>
+        </div>
 
-  <Box textAlign="center" marginTop="25px">
-  <motion.button 
-    whileHover={{ scale: 1.1 }}
-    whileTap={{ scale: 0.9 }}
-    style={{
-        background: "linear-gradient(to right, rgba(29, 211, 189, 0.3), rgba(62, 100, 255, 0.3))",
-        display: "flex",
-        borderRadius: "25px",
-        padding: "10px 20px",
-        justifyContent: "center",
-    }}
-    onClick={onOpen}
->
-    <Text fontSize="xl" fontWeight="400"> View Resume </Text>
-</motion.button>
-
-  </Box>
-</Box>
+        <Box textAlign="center" marginTop="25px">
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            style={{
+              background:
+                "linear-gradient(to right, rgba(29, 211, 189, 0.3), rgba(62, 100, 255, 0.3))",
+              display: "flex",
+              borderRadius: "25px",
+              padding: "10px 20px",
+              justifyContent: "center",
+            }}
+            onClick={onOpen}
+          >
+            <Text fontSize="xl" fontWeight="400">
+              {" "}
+              View Resume{" "}
+            </Text>
+          </motion.button>
+        </Box>
+      </Box>
 
       <Box
         display="flex"

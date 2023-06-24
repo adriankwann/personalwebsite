@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Modal,
   ModalOverlay,
@@ -8,7 +8,7 @@ import {
   ModalCloseButton,
   Box,
   Link,
-} from '@chakra-ui/react';
+} from "@chakra-ui/react";
 
 type ResumeModalProps = {
   isOpen: boolean;
@@ -16,7 +16,8 @@ type ResumeModalProps = {
 };
 
 const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => {
-  const resumeUrl = 'https://example.com/link-to-resume.pdf'; // replace with the URL to your resume
+  const resumeUrl =
+    "https://drive.google.com/file/d/1YKiPkLL5y6fPjK5pCbvCdgozi2JXrF_0/view?usp=sharing";
 
   return (
     <Modal isOpen={isOpen} onClose={onClose} size="xl">
@@ -24,7 +25,13 @@ const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => {
       <ModalContent>
         <ModalHeader>Resume</ModalHeader>
         <ModalCloseButton />
-        <Box as="iframe" src={resumeUrl} width="100%" height="500px" title="Resume" />
+        <Box
+          as="iframe"
+          src={resumeUrl}
+          width="100%"
+          height="500px"
+          title="Resume"
+        />
         <ModalFooter>
           <Link href={resumeUrl} isExternal>
             Download Resume

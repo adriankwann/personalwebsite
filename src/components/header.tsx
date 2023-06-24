@@ -1,7 +1,6 @@
 import React from "react";
-import { Divider, Box, HStack, Link, Button } from "@chakra-ui/react";
+import { Divider, Box, HStack, Link } from "@chakra-ui/react";
 import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
-import { motion } from "framer-motion";
 import NextLink from "next/link";
 
 const Header: React.FC = () => {

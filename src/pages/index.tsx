@@ -4,7 +4,7 @@ import {
   Center,
   Heading,
   Spinner,
-  Divider
+  Divider,
 } from "@chakra-ui/react";
 import Head from "next/head";
 import Header from "../components/header";

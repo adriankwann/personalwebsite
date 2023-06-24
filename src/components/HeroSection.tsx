@@ -107,7 +107,7 @@ export default function HeroSection() {
             {/* Image on the right */}
             <div className="w-1/3" data-aos="fade-up">
               <Image
-                src="https://photos.app.goo.gl/Wsif9g5Qwk5pKguV6"
+                src="https://i.ibb.co/6bYBGDq/IMG-1048-copy.png"
                 alt="Headshot"
                 maxWidth="300px"
                 maxHeight="500px"

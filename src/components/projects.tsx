@@ -16,21 +16,21 @@ export default function Projects() {
       title: "Zettablock's AI Assistant",
       description:
         "A chatbot that allows users to use natural language to setup an API automatically with required blockchain data.",
-      image: "https://photos.app.goo.gl/Krf7wc9xz1jeQ1D87",
+      image: "https://i.ibb.co/RvRLCSz/zetta.png",
       technologies: ["Golang", "Gin", "AWS", "GPT API"],
     },
     {
       title: "B@BPoll",
       description:
         "A zero-knowledge anonymous voting protocol deployed on polygon, using Semaphore's zkSNARKs library.",
-      image: "https://photos.app.goo.gl/bdt7iAqV57gYWhhM8",
+      image: "https://i.ibb.co/XYVmHDz/babpoll.png",
       technologies: ["React", "Solidity", "TypeScript", "Chakra"],
     },
     {
       title: "dBridge",
       description:
         "Allows users to find the best conversion rates and trading strategies between two tokens of their choice.",
-      image: "https://photos.app.goo.gl/2CSmXQXtRXB5sR9T9",
+      image: "https://i.ibb.co/cxDvqZw/Screenshot-2023-04-24-at-3-30-59-PM.png",
       technologies: ["React", "Solidity", "JavaScript"],
     },
     {
@@ -45,7 +45,7 @@ export default function Projects() {
       title: "SAAS Website",
       description:
         "Built the SAAS website. This website serves as a landing page for clients and prospective applicants.",
-      image: "https://photos.app.goo.gl/usdDpctiBZnZRCYz7",
+      image: "https://i.ibb.co/px90hRH/saas.png",
       technologies: ["React", "Django", "Chakra"],
     },
   ];

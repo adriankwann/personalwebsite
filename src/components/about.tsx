@@ -10,43 +10,43 @@ export default function About() {
     AOS.init({ duration: 800 });
   }, []);
 
-  const languages = [
-    "Python",
-    "JavaScript",
-    "TypeScript",
-    "Solidity",
-    "C",
-    "Java",
-    "Go",
-    "GraphQL",
-    "SQL",
-  ];
-  const frameworks = [
-    "react",
-    "next",
-    "Gin",
-    "Flask",
-    "AWS",
-    "Supabase",
-    "MongoDB",
-    "Prisma",
-    "Git",
-    "Node",
-    "Vercel",
-    "tRPC",
-    "NextAuth",
-    "Tailwind",
-  ];
+//   const languages = [
+//     "Python",
+//     "JavaScript",
+//     "TypeScript",
+//     "Solidity",
+//     "C",
+//     "Java",
+//     "Go",
+//     "GraphQL",
+//     "SQL",
+//   ];
+//   const frameworks = [
+//     "react",
+//     "next",
+//     "Gin",
+//     "Flask",
+//     "AWS",
+//     "Supabase",
+//     "MongoDB",
+//     "Prisma",
+//     "Git",
+//     "Node",
+//     "Vercel",
+//     "tRPC",
+//     "NextAuth",
+//     "Tailwind",
+//   ];
 
-  const splitLanguages = (arr) => {
-    const midpoint = Math.ceil(arr.length / 2);
-    const firstHalf = arr.slice(0, midpoint);
-    const secondHalf = arr.slice(midpoint);
-    return [firstHalf, secondHalf];
-  };
+//   const splitLanguages = (arr) => {
+//     const midpoint = Math.ceil(arr.length / 2);
+//     const firstHalf = arr.slice(0, midpoint);
+//     const secondHalf = arr.slice(midpoint);
+//     return [firstHalf, secondHalf];
+//   };
 
-  const [firstRow, secondRow] = splitLanguages(languages);
-  const [firstFrameworks, secondFrameworks] = splitLanguages(frameworks);
+//   const [firstRow, secondRow] = splitLanguages(languages);
+//   const [firstFrameworks, secondFrameworks] = splitLanguages(frameworks);
 
   const companies = [
     {

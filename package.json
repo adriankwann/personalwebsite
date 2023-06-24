@@ -12,6 +12,8 @@
     "@chakra-ui/react": "^2.7.1",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@fontsource-variable/space-grotesk": "^5.0.3",
+    "@fontsource/lato": "^5.0.3",
     "@t3-oss/env-nextjs": "^0.3.1",
     "aos": "^3.0.0-beta.6",
     "framer-motion": "^10.12.17",

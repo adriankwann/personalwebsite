@@ -26,10 +26,10 @@ const ClassCard: React.FC<ClassCardProps> = ({ name, description, link }) => {
           minHeight="13vh"
           overflow="scroll"
         >
-          <Heading size="md" mb="2">
+          <Heading size="md" mb="2" fontWeight="400">
             {name}
           </Heading>
-          <Text>{description}</Text>
+          <Text fontWeight="300">{description}</Text>
         </Box>
       </motion.button>
     </Link>

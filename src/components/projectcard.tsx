@@ -43,12 +43,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             maxHeight="150px"
             maxWidth="35vh"
           />
-          <Heading size="md" marginTop="15px">
+          <Heading size="md" marginTop="15px" fontWeight="700">
             {title}
           </Heading>
           <Text textAlign="center">{description}</Text>
           <Box textAlign="center" className="15px">
-            <Text fontSize="sm" fontWeight="bold" mb="2">
+            <Text fontSize="sm" fontWeight="400" mb="2">
               Technologies/Languages:
             </Text>
             <Stack
@@ -66,13 +66,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                   borderRadius="md"
                   p="1"
                   fontSize="sm"
+                  fontWeight="300"
                 >
                   {tech}
                 </Box>
               ))}
             </Stack>
           </Box>
-          <Button color="blue.600" fontSize="l" width="50%" marginTop="15px">
+          <Button
+            color="blue.600"
+            fontSize="l"
+            width="50%"
+            marginTop="10px"
+            fontWeight="500"
+          >
             Learn More
           </Button>
         </Stack>

@@ -10,44 +10,6 @@ export default function About() {
     AOS.init({ duration: 800 });
   }, []);
 
-  //   const languages = [
-  //     "Python",
-  //     "JavaScript",
-  //     "TypeScript",
-  //     "Solidity",
-  //     "C",
-  //     "Java",
-  //     "Go",
-  //     "GraphQL",
-  //     "SQL",
-  //   ];
-  //   const frameworks = [
-  //     "react",
-  //     "next",
-  //     "Gin",
-  //     "Flask",
-  //     "AWS",
-  //     "Supabase",
-  //     "MongoDB",
-  //     "Prisma",
-  //     "Git",
-  //     "Node",
-  //     "Vercel",
-  //     "tRPC",
-  //     "NextAuth",
-  //     "Tailwind",
-  //   ];
-
-  //   const splitLanguages = (arr) => {
-  //     const midpoint = Math.ceil(arr.length / 2);
-  //     const firstHalf = arr.slice(0, midpoint);
-  //     const secondHalf = arr.slice(midpoint);
-  //     return [firstHalf, secondHalf];
-  //   };
-
-  //   const [firstRow, secondRow] = splitLanguages(languages);
-  //   const [firstFrameworks, secondFrameworks] = splitLanguages(frameworks);
-
   const companies = [
     {
       logo: "https://pbs.twimg.com/profile_images/1587543750271811584/ZyZ6Zhg__400x400.jpg",
@@ -113,10 +75,10 @@ export default function About() {
   }
 
   return (
-    <Box>
+    <Box padding="0 10%">
       <Box
         display="flex"
-        alignItems="flex-start"
+        alignItems="center"
         justifyContent="center"
         height="auto"
         marginTop="10vh"
@@ -128,10 +90,46 @@ export default function About() {
           color="transparent"
           bgGradient="linear(to-r, #3e64ff, #1dd3bd)"
           bgClip="text"
+          fontWeight="400"
         >
           About
         </Heading>
       </Box>
+      <Box
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        justifyContent="center"
+        textAlign="center"
+        marginBottom="25px"
+        data-aos="fade-up"
+        marginTop="50px"
+        maxWidth="50%"
+        marginLeft="auto"
+        marginRight="auto"
+      >
+        <Text fontSize="lg" fontWeight="300">
+          My name is Adrian Kwan and I'm currently studying Computer Science @
+          {"    "}
+          <Text as="mark" className="highlight">
+            UC Berkeley
+          </Text>
+          . I am an aspiring full-stack{" "}
+          <Text as="mark" className="highlight">
+            software engineer
+          </Text>{" "}
+          and tech{" "}
+          <Text as="mark" className="highlight">
+            entrepreneur
+          </Text>
+          .
+        </Text>
+        <Text fontSize="lg" fontWeight="300">
+          I'm interested in LLMs, computer vision, zero knowledge proofs, and
+          decentralized finance.
+        </Text>
+      </Box>
+
       <Box
         display="flex"
         alignItems="flex-start"
@@ -141,7 +139,7 @@ export default function About() {
         data-aos="fade-up"
         marginTop="50px"
       >
-        <Heading size="md" color="black" textAlign="center">
+        <Heading size="md" color="black" textAlign="center" fontWeight="100">
           Previous Companies
         </Heading>
       </Box>
@@ -154,7 +152,13 @@ export default function About() {
         data-aos="fade-up"
         marginTop="50px"
       >
-        <Stack direction="row" data-aos="fade-in" spacing={8} align="center">
+        <Stack
+          direction="row"
+          data-aos="fade-in"
+          spacing={8}
+          align="center"
+          fontWeight="300"
+        >
           {/* Logos with captions */}
           {companies.map((company) => (
             <motion.button
@@ -184,8 +188,9 @@ export default function About() {
           ))}
         </Stack>
       </Box>
+
       <Box data-aos="fade-up">
-        <Heading size="md" textAlign="center">
+        <Heading size="md" textAlign="center" fontWeight="100">
           Previous Coursework
         </Heading>
       </Box>

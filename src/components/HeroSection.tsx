@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { HStack, Image } from "@chakra-ui/react";
+import { HStack, Image, Heading } from "@chakra-ui/react";
 import { Link as ScrollLink } from "react-scroll";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -56,9 +56,9 @@ export default function HeroSection() {
           <HStack spacing={20} align="start" data-aos="fade-up">
             {/* Text content on the left */}
             <div className="w-auto pr-8 text-left">
-              <h1 className="text-4xl font-bold tracking-tight text-black sm:text-6xl">
+              <Heading fontWeight="700" fontSize="5xl">
                 Welcome to my website!
-              </h1>
+              </Heading>
               <p
                 className={`mt-6 text-lg leading-8 text-black ${
                   fade ? "fade-out" : "fade-in"

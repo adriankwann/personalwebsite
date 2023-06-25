@@ -17,7 +17,9 @@ type ResumeModalProps = {
 
 const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => {
   const resumeUrl =
-    "https://drive.google.com/file/d/1YKiPkLL5y6fPjK5pCbvCdgozi2JXrF_0/view?usp=sharing";
+    "https://drive.google.com/file/d/1YKiPkLL5y6fPjK5pCbvCdgozi2JXrF_0/view";
+
+    const previewUrl = "https://drive.google.com/file/d/1YKiPkLL5y6fPjK5pCbvCdgozi2JXrF_0/preview";
 
   return (
     <Modal isOpen={isOpen} onClose={onClose} size="xl">
@@ -27,7 +29,7 @@ const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => {
         <ModalCloseButton />
         <Box
           as="iframe"
-          src={resumeUrl}
+          src={previewUrl}
           width="100%"
           height="500px"
           title="Resume"

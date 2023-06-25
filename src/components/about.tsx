@@ -136,15 +136,15 @@ export default function About() {
           <Text fontSize="2xl" fontWeight="300">
             My name is Adrian Kwan and I&apos;m currently studying Computer
             Science @{" "}
-            <Text as="mark" className="highlight">
+            <Text as="em" className="highlight">
               UC Berkeley
             </Text>
             . <br></br>I am an aspiring full-stack{" "}
-            <Text as="mark" className="highlight">
+            <Text as="em" className="highlight">
               software engineer
             </Text>{" "}
             and tech{" "}
-            <Text as="mark" className="highlight">
+            <Text as="em" className="highlight">
               entrepreneur
             </Text>
             .

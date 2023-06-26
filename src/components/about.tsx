@@ -236,11 +236,83 @@ export default function About() {
         </Stack>
       </Box>
 
-      <Box data-aos="fade-up" marginBottom="25px">
-        <Heading size="md" textAlign="center" fontWeight="100">
-          Campus Involvements
-        </Heading>
-      </Box>
+      {/* <Box data-aos="fade-up" marginBottom="25px">
+  <Heading size="md" textAlign="center" fontWeight="100">
+    Campus Involvements
+  </Heading>
+  <Box
+    display="flex"
+    flexDirection="column"
+    alignItems="center"
+    justifyContent="center"
+    marginBottom="25px"
+    marginTop="20px"
+  >
+    <Stack
+      direction="row"
+      data-aos="fade-in"
+      spacing={8}
+      align="center"
+      fontWeight="300"
+    >
+      <motion.button
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        style={{
+          background: "none",
+          border: "none",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <Link
+          href="https://saas.berkeley.edu/"
+          isExternal
+          _hover={{ textDecoration: "none" }}
+        >
+          <Box textAlign="center">
+            <Image
+              src="https://i.ibb.co/s9fVp2p/new-logo.png"
+              alt="SAAS logo"
+              height="50px"
+              width = "100px"
+            />
+            <Text fontSize="sm" textAlign="center" marginTop="10px">
+              SAAS Berkeley
+            </Text>
+          </Box>
+        </Link>
+      </motion.button>
+      <motion.button
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        style={{
+          background: "none",
+          border: "none",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <Link
+          href="https://blockchain.berkeley.edu/"
+          isExternal
+          _hover={{ textDecoration: "none" }}
+        >
+          <Box textAlign="center">
+            <Image
+              src="https://i.ibb.co/dQdstSH/1519869642581.jpg"
+              alt="SAAS logo"
+              height="50px"
+            />
+            <Text fontSize="sm" textAlign="center" marginTop="10px">
+              Blockchain at Berkeley
+            </Text>
+          </Box>
+        </Link>
+      </motion.button>
+    </Stack>
+  </Box> */}
+{/* </Box> */}
 
       <Box data-aos="fade-up">
         <Heading size="md" textAlign="center" fontWeight="100">

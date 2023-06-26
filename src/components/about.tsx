@@ -312,7 +312,7 @@ export default function About() {
       </motion.button>
     </Stack>
   </Box> */}
-{/* </Box> */}
+      {/* </Box> */}
 
       <Box data-aos="fade-up">
         <Heading size="md" textAlign="center" fontWeight="100">

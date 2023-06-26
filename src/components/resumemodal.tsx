@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Modal,
   ModalOverlay,
@@ -8,6 +8,7 @@ import {
   ModalCloseButton,
   Box,
   Link,
+  Spinner,
 } from "@chakra-ui/react";
 
 type ResumeModalProps = {
@@ -22,23 +23,43 @@ const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => {
   const previewUrl =
     "https://drive.google.com/file/d/1YKiPkLL5y6fPjK5pCbvCdgozi2JXrF_0/preview";
 
+  const [isIframeLoading, setIsIframeLoading] = useState(true);
+
+  const handleIframeLoad = () => {
+    setIsIframeLoading(false);
+  };
+
   return (
     <Modal isOpen={isOpen} onClose={onClose} size="xl">
       <ModalOverlay />
       <ModalContent>
         <ModalHeader>Resume</ModalHeader>
         <ModalCloseButton />
+        {isIframeLoading ? (
+          <Box
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            height="500px"
+          >
+            <Spinner size="xl" />
+          </Box>
+        ) : null}
         <Box
           as="iframe"
           src={previewUrl}
           width="100%"
           height="500px"
           title="Resume"
+          onLoad={handleIframeLoad}
+          style={{ display: isIframeLoading ? "none" : "block" }}
         />
         <ModalFooter>
-          <Link href={resumeUrl} isExternal>
-            Download Resume
-          </Link>
+          {!isIframeLoading && (
+            <Link href={resumeUrl} isExternal>
+              Download Resume
+            </Link>
+          )}
         </ModalFooter>
       </ModalContent>
     </Modal>

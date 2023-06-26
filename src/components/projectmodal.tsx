@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Modal,
   ModalOverlay,
@@ -14,6 +14,7 @@ import {
   Tag,
   Wrap,
   Divider,
+  Spinner,
 } from "@chakra-ui/react";
 import { StaticImageData } from "next/image";
 import { FaGithub } from "react-icons/fa";
@@ -43,6 +44,12 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
   longDescription,
   demo,
 }) => {
+  const [isIframeLoading, setIsIframeLoading] = useState(true);
+
+  const handleIframeLoad = () => {
+    setIsIframeLoading(false);
+  };
+
   return (
     <Modal isOpen={isOpen} onClose={onClose} size="2xl">
       <ModalOverlay />
@@ -50,7 +57,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
         <ModalHeader textAlign="center" fontWeight="400">
           Project Display
         </ModalHeader>
-        <Divider orientation="horizontal"></Divider>
+        <Divider orientation="horizontal" />
         <ModalCloseButton />
         <Box marginX={4} textAlign="left" marginTop="20px">
           <Heading size="md" fontWeight="400" marginBottom={2}>
@@ -72,12 +79,24 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
               <Text size="md" fontWeight="300" marginBottom="3">
                 Demo
               </Text>
+              {isIframeLoading ? (
+                <Box
+                  display="flex"
+                  justifyContent="center"
+                  alignItems="center"
+                  height="315px"
+                >
+                  <Spinner size="xl" />
+                </Box>
+              ) : null}
               <iframe
                 width="100%"
                 height="315"
                 src={demo}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
+                onLoad={handleIframeLoad}
+                style={{ display: isIframeLoading ? "none" : "block" }}
               ></iframe>
             </Box>
           ) : null}
@@ -103,7 +122,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
             </Text>
             <Text>{longDescription ? longDescription : description}</Text>
           </Box>
-          <Divider orientation="horizontal"></Divider>
+          <Divider orientation="horizontal" />
         </Box>
         <ModalFooter>
           {github ? (

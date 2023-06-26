@@ -21,7 +21,8 @@ export default function Projects() {
       association: "Zettablock",
       github: "",
       demo: "",
-      longDescription: "Zettablock’s AI Assistant is an advanced feature integrated within its product suite, empowering users to seamlessly create SQL queries through natural language inputs. By employing GPT's 3.5 Turbo 16K model, the AI Assistant streamlines API setup, with a demonstrated 35% reduction in error rates and a remarkable 70% reduction in users’ API setup times. As part of the implementation, the AI Assistant utilizes a specially curated Text-to-SQL dataset comprising 20,000 inputs and GPT outputs from users and research papers, which facilitates efficient training. Additionally, Zettablock's AI Assistant is equipped with a customized test framework and evaluation metric, capable of testing among 10+ large language models (LLMs), which has proven to be a game-changer by reducing development time by 100%."
+      longDescription:
+        "Zettablock’s AI Assistant is an advanced feature integrated within its product suite, empowering users to seamlessly create SQL queries through natural language inputs. By employing GPT's 3.5 Turbo 16K model, the AI Assistant streamlines API setup, with a demonstrated 35% reduction in error rates and a remarkable 70% reduction in users’ API setup times. As part of the implementation, the AI Assistant utilizes a specially curated Text-to-SQL dataset comprising 20,000 inputs and GPT outputs from users and research papers, which facilitates efficient training. Additionally, Zettablock's AI Assistant is equipped with a customized test framework and evaluation metric, capable of testing among 10+ large language models (LLMs), which has proven to be a game-changer by reducing development time by 100%.",
     },
     {
       title: "B@BPoll",
@@ -43,7 +44,7 @@ export default function Projects() {
       technologies: ["React", "Solidity", "JavaScript"],
       association: "",
       github: "https://github.com/adriankwann/dexapp",
-      demo: "",
+      demo: "https://gifyu.com/image/SQj2R",
       longDescription:
         "dBridge is a cutting-edge DeFi exchange aggregator developed between March 2023 to present. It is engineered using React and JavaScript and efficiently calculates optimal trading rates and strategies for over 20 tokens across more than 15 exchanges. With a focus on user experience, the frontend is designed to be responsive and intuitive, featuring custom animations that have earned it a 90% user satisfaction rate. Moreover, dBridge ensures peak performance even under high traffic by employing caching and optimization strategies that have achieved a remarkable 25% increase in load times.",
     },

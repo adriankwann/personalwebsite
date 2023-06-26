@@ -47,30 +47,6 @@ export default function Home() {
 
   return (
     <ChakraProvider theme={theme}>
-      <Head>
-        <style>
-          {`
-          body {
-            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-            background-size: 400% 400%;
-            height: 100vh;
-            animation: gradient-animation 15s ease infinite;
-          }
-          
-          @keyframes gradient-animation {
-            0% {
-              background-position: 0% 50%;
-            }
-            50% {
-              background-position: 100% 50%;
-            }
-            100% {
-              background-position: 0% 50%;
-            }
-          }
-          `}
-        </style>
-      </Head>
       {isLoading ? (
         <Center height="100vh" flexDirection="column">
           <Heading
@@ -89,9 +65,9 @@ export default function Home() {
         </Center>
       ) : (
         <>
-          <Header />
-          <HeroSection />
           <div id="content-wrapper">
+            <Header />
+            <HeroSection />
             <div id="about-section">
               <About />
             </div>

@@ -9,7 +9,7 @@ const Header: React.FC = () => {
       <header style={headerStyle}>
         <HStack justifyContent="space-between" width="100%" paddingX={8}>
           <Box flex="1" textAlign="left">
-            <Link as={NextLink} href="/" _hover={{ textDecoration: "none" }}>
+            <Link href="/" _hover={{ textDecoration: "none" }}>
               <h1 style={headingStyle}>Adrian Kwan</h1>
             </Link>
           </Box>

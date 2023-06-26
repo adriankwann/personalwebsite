@@ -64,7 +64,7 @@ export default function About() {
     {
       name: "CS 70",
       description: "Discrete Mathematics and Probability Theory",
-      link: "https://cs70.org/",
+      link: "https://eecs70.org/",
     },
     {
       name: "CS 170",
@@ -234,6 +234,12 @@ export default function About() {
             </motion.button>
           ))}
         </Stack>
+      </Box>
+
+      <Box data-aos="fade-up" marginBottom="25px">
+        <Heading size="md" textAlign="center" fontWeight="100">
+          Campus Involvements
+        </Heading>
       </Box>
 
       <Box data-aos="fade-up">

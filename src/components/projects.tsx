@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { VStack, HStack, Box, Heading } from "@chakra-ui/react";
+import { VStack, HStack, Box, Heading, useDisclosure } from "@chakra-ui/react";
 import ProjectCard from "./projectcard";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -18,6 +18,10 @@ export default function Projects() {
         "A chatbot that allows users to use natural language to setup an API automatically with required blockchain data.",
       image: "https://i.ibb.co/RvRLCSz/zetta.png",
       technologies: ["Golang", "Gin", "AWS", "GPT API"],
+      association: "Zettablock",
+      github: "",
+      demo: "",
+      longDescription: "",
     },
     {
       title: "B@BPoll",
@@ -25,6 +29,11 @@ export default function Projects() {
         "A zero-knowledge anonymous voting protocol deployed on polygon, using Semaphore's zkSNARKs library.",
       image: "https://i.ibb.co/XYVmHDz/babpoll.png",
       technologies: ["React", "Solidity", "TypeScript", "Chakra"],
+      association: "Blockchain at Berkeley",
+      github: "https://github.com/adriankwann/babpollfront",
+      demo: "https://www.youtube.com/embed/Wcbaz2JtV-0&t=3s",
+      longDescription:
+        "B@BPoll, developed from February to May 2023, is an innovative voting platform that leverages Solidity, React, and JavaScript to ensure anonymous and secure voting in elections. By incorporating Semaphore's Zero-Knowledge Proof (ZKP) circuits, the platform establishes a new standard for voting privacy and security. B@BPoll’s voting contracts were meticulously crafted from the ground up and deployed on the Polygon network, with seamless integration with a custom-built React frontend through ABI connections. This project successfully enabled over 100 club members to participate in club elections, resulting in a 95% user satisfaction rate and a 25% increase in participation.",
     },
     {
       title: "dBridge",
@@ -32,6 +41,11 @@ export default function Projects() {
         "Allows users to find the best conversion rates and trading strategies between two tokens of their choice.",
       image: "https://i.ibb.co/cxDvqZw/Screenshot-2023-04-24-at-3-30-59-PM.png",
       technologies: ["React", "Solidity", "JavaScript"],
+      association: "",
+      github: "https://github.com/adriankwann/dexapp",
+      demo: "",
+      longDescription:
+        "dBridge is a cutting-edge DeFi exchange aggregator developed between March 2023 to present. It is engineered using React and JavaScript and efficiently calculates optimal trading rates and strategies for over 20 tokens across more than 15 exchanges. With a focus on user experience, the frontend is designed to be responsive and intuitive, featuring custom animations that have earned it a 90% user satisfaction rate. Moreover, dBridge ensures peak performance even under high traffic by employing caching and optimization strategies that have achieved a remarkable 25% increase in load times.",
     },
     {
       title: "Gitlet",
@@ -40,6 +54,11 @@ export default function Projects() {
       image:
         "https://cloudstudio.com.au/wp-content/uploads/2021/06/GitWorkflow-4.png",
       technologies: ["Java"],
+      association: "",
+      github: "https://github.com/adriankwann/61b/tree/main/gitlet",
+      demo: "",
+      longDescription:
+        "Gitlet is a robust version control system akin to Git, developed in Java between April and May 2022. The system allows users to stage and commit files, merge changes, and restore and revert states, providing comprehensive control over file versions. Gitlet employs sophisticated data structures and SHA-1 hashing to enable efficient serialization and a tree-like file structure. It also features capabilities like maintaining chronological sequences of commits, initializing a Git workspace, and generating file log history, making it a powerful tool for managing project development.",
     },
     {
       title: "SAAS Website",
@@ -47,6 +66,10 @@ export default function Projects() {
         "Built the SAAS website. This website serves as a landing page for clients and prospective applicants.",
       image: "https://i.ibb.co/px90hRH/saas.png",
       technologies: ["React", "Django", "Chakra"],
+      association: "Students Association of Applied Statistics",
+      github: "https://github.com/SUSA-org/usa-website",
+      demo: "",
+      longDescription: "",
     },
   ];
 
@@ -78,6 +101,10 @@ export default function Projects() {
               description={project.description}
               image={project.image}
               technologies={project.technologies}
+              association={project.association}
+              github={project.github}
+              longDescription={project.longDescription}
+              demo={project.demo}
             />
           ))}
         </HStack>
@@ -89,8 +116,12 @@ export default function Projects() {
               description={project.description}
               image={project.image}
               technologies={project.technologies}
+              association={project.association}
+              github={project.github}
+              longDescription={project.longDescription}
               data-aos="fade-in"
               data-aos-delay={index * delayStep}
+              demo={project.demo}
             />
           ))}
         </HStack>

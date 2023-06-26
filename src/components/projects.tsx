@@ -21,7 +21,7 @@ export default function Projects() {
       association: "Zettablock",
       github: "",
       demo: "",
-      longDescription: "",
+      longDescription: "Zettablock’s AI Assistant is an advanced feature integrated within its product suite, empowering users to seamlessly create SQL queries through natural language inputs. By employing GPT's 3.5 Turbo 16K model, the AI Assistant streamlines API setup, with a demonstrated 35% reduction in error rates and a remarkable 70% reduction in users’ API setup times. As part of the implementation, the AI Assistant utilizes a specially curated Text-to-SQL dataset comprising 20,000 inputs and GPT outputs from users and research papers, which facilitates efficient training. Additionally, Zettablock's AI Assistant is equipped with a customized test framework and evaluation metric, capable of testing among 10+ large language models (LLMs), which has proven to be a game-changer by reducing development time by 100%."
     },
     {
       title: "B@BPoll",

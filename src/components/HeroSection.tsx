@@ -1,5 +1,13 @@
 import { useState, useEffect } from "react";
-import { HStack, Image, Heading } from "@chakra-ui/react";
+import {
+  HStack,
+  Image,
+  Heading,
+  useBreakpointValue,
+  Box,
+  Text,
+  Button,
+} from "@chakra-ui/react";
 import { Link as ScrollLink } from "react-scroll";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -22,6 +30,8 @@ export default function HeroSection() {
   const scrollLinkStyles = {
     cursor: "pointer",
   };
+  const headingSize = useBreakpointValue({ base: "4xl", md: "6xl" });
+  const imageSize = useBreakpointValue({ base: "150px", md: "300px" });
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -37,8 +47,9 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <div className="relative h-[83vh] bg-white">
-      <div className="relative isolate flex items-center px-6 pt-14 lg:px-8">
+    <Box className="relative h-[83vh] bg-white">
+      <Box className="relative isolate flex items-center px-6 pt-14 lg:px-8">
+        {/* Background Shape */}
         <div
           className="absolute inset-x-0 -top-20 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-60"
           aria-hidden="true"
@@ -53,21 +64,26 @@ export default function HeroSection() {
         </div>
 
         {/* Content */}
-        <div className="mx-auto max-w-7xl py-16 sm:py-32 lg:py-40">
-          <HStack spacing={20} align="start" data-aos="fade-up">
+        <Box className="mx-auto max-w-7xl py-16 sm:py-32 lg:py-40">
+          <HStack
+            spacing={{ base: 5, md: 20 }}
+            align="start"
+            data-aos="fade-up"
+          >
             {/* Text content on the left */}
-            <div className="w-auto pr-8 text-left">
-              <Heading fontWeight="700" fontSize="6xl">
+            <Box className="w-auto pr-8 text-left">
+              <Heading fontWeight="700" fontSize={headingSize}>
                 Welcome to my website!
               </Heading>
-              <p
-                className={`mt-6 text-lg leading-8 text-black ${
-                  fade ? "fade-out" : "fade-in"
-                }`}
+              <Text
+                mt={6}
+                fontSize={{ base: "md", md: "lg" }}
+                lineHeight="leading-8"
+                className={`text-black ${fade ? "fade-out" : "fade-in"}`}
               >
                 {bulletPoints[currentIndex]}
-              </p>
-              <div className="mt-10" data-aos="fade-up">
+              </Text>
+              <Box mt={10} data-aos="fade-up">
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
@@ -77,7 +93,7 @@ export default function HeroSection() {
                     smooth={true}
                     duration={500}
                     spy={true}
-                    offset={-50} // Adjust this value to fine-tune the scroll position
+                    offset={-50}
                     style={scrollLinkStyles}
                     className="rounded-md border border-indigo-600 bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                   >
@@ -101,22 +117,22 @@ export default function HeroSection() {
                     Projects
                   </ScrollLink>
                 </motion.button>
-              </div>
-            </div>
+              </Box>
+            </Box>
 
             {/* Image on the right */}
-            <div className="w-1/3" data-aos="fade-up">
+            <Box w="1/3" data-aos="fade-up">
               <Image
                 src="https://i.ibb.co/6bYBGDq/IMG-1048-copy.png"
                 alt="Headshot"
-                maxWidth="300px"
-                maxHeight="500px"
+                w={imageSize}
+                h={imageSize}
                 className="rounded-md"
               />
-            </div>
+            </Box>
           </HStack>
-        </div>
-      </div>
+        </Box>
+      </Box>
 
       <style jsx>{`
         .fade-in {
@@ -129,6 +145,6 @@ export default function HeroSection() {
           transition: opacity 0.5s ease-in-out;
         }
       `}</style>
-    </div>
+    </Box>
   );
 }

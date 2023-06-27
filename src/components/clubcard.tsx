@@ -8,6 +8,7 @@ import {
   Image,
   UnorderedList,
   ListItem,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
@@ -24,6 +25,23 @@ const ClubCard: React.FC<ClassCardProps> = ({
   link,
   logo,
 }) => {
+  const width = useBreakpointValue({
+    base: "90vw",
+    sm: "45vh",
+    md: "40vh",
+  });
+
+  const imageSize = useBreakpointValue({
+    base: "2em",
+    sm: "2.5em",
+    md: "3em",
+  });
+
+  const headingSize = useBreakpointValue({
+    base: "sm",
+    md: "md",
+  });
+
   return (
     <Link
       href={link}
@@ -37,7 +55,7 @@ const ClubCard: React.FC<ClassCardProps> = ({
           borderRadius="md"
           p="4"
           mb="4"
-          width="40vh"
+          width={width}
           minHeight="13vh"
           maxHeight="13vh"
           overflow="none"
@@ -49,15 +67,19 @@ const ClubCard: React.FC<ClassCardProps> = ({
             <Image
               src={logo}
               alt={`${name} logo`}
-              width="3em"
-              height="3em"
-              minHeight="2em"
+              width={imageSize}
+              height={imageSize}
               objectFit="contain"
               mb="2"
               mt="1em"
             />
 
-            <Heading size="md" mb="2" fontWeight="400" textAlign="center">
+            <Heading
+              size={headingSize}
+              mb="2"
+              fontWeight="400"
+              textAlign="center"
+            >
               {name}
             </Heading>
           </Flex>

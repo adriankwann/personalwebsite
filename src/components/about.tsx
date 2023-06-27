@@ -168,9 +168,9 @@ export default function About() {
           </motion.button>
         </Box>
       </Box>
-      <CompaniesSection/>
+      <CompaniesSection />
 
-      <Box data-aos="fade-left" marginTop = "10vh">
+      <Box data-aos="fade-left" marginTop="10vh">
         <Heading size="md" textAlign="center" fontWeight="100">
           Student Organizations
         </Heading>
@@ -204,7 +204,7 @@ export default function About() {
           </Stack>
         </Box>
       </Box>
-      <Box data-aos="fade-up" marginTop = "10vh">
+      <Box data-aos="fade-up" marginTop="10vh">
         <Heading size="md" textAlign="center" fontWeight="100">
           Previous Coursework
         </Heading>

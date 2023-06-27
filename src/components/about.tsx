@@ -4,7 +4,7 @@ import {
   Heading,
   Stack,
   Text,
-  Link,
+  Flex,
   Image,
   useDisclosure,
 } from "@chakra-ui/react";
@@ -14,6 +14,8 @@ import ClassCard from "./classcard";
 import { motion } from "framer-motion";
 import ResumeModal from "./resumemodal";
 import Wave from "react-wavify";
+import ClubCard from "./clubcard";
+import CompaniesSection from "./companiesSection";
 
 export default function About() {
   useEffect(() => {
@@ -22,27 +24,17 @@ export default function About() {
 
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const companies = [
-    {
-      logo: "https://pbs.twimg.com/profile_images/1587543750271811584/ZyZ6Zhg__400x400.jpg",
-      caption: "Zettablock",
-      link: "https://zettablock.com/",
-    },
-    {
-      logo: "https://flowgpt.com/flowgpt.png",
-      caption: "FlowGPT",
-      link: "https://flowgpt.com",
-    },
-    {
-      logo: "https://www.circle.com/hubfs/Circle%20logo%202020/circle-icon.png",
-      caption: "Circle",
-      link: "https://circle.com",
-    },
-    {
-      logo: "https://www.augury.com/wp-content/uploads/2023/05/Augury-Logo-for-Author-page.png",
-      caption: "Augury",
-      link: "https://augury.com",
-    },
+  const saasDescription = [
+    "A community of UC Berkeley students with a shared interest in data science.",
+    "Fa22: Web Development Committee",
+    "Sp23: Web Development Committee",
+    "Fa23: Leadership, Web Developer",
+  ];
+
+  const babDescription = [
+    "A student-run organization at UC Berkeley focused on blockchain innovation via education, research, and consulting.",
+    "Sp23: Internal Developer, B@BPoll  Governance: Uniswap, Aave Teams",
+    "Fa23: External Developer, TBD Project",
   ];
 
   const classes = [
@@ -126,9 +118,9 @@ export default function About() {
         alignItems="center"
         justifyContent="center"
         marginBottom="25px"
-        data-aos="fade-up"
+        data-aos="zoom-out-up"
         marginTop="50px"
-        maxWidth="40%"
+        maxWidth="50%"
         marginLeft="auto"
         marginRight="auto"
       >
@@ -155,7 +147,7 @@ export default function About() {
           </Text>
         </div>
 
-        <Box textAlign="center" marginTop="25px">
+        <Box textAlign="center" marginTop="25px" marginBottom="15vh">
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -176,145 +168,43 @@ export default function About() {
           </motion.button>
         </Box>
       </Box>
+      <CompaniesSection/>
 
-      <Box
-        display="flex"
-        alignItems="flex-start"
-        justifyContent="center"
-        height="auto"
-        marginBottom="25px"
-        data-aos="fade-up"
-        marginTop="15vh"
-      >
-        <Heading size="md" color="black" textAlign="center" fontWeight="100">
-          Previous Companies
+      <Box data-aos="fade-left" marginTop = "10vh">
+        <Heading size="md" textAlign="center" fontWeight="100">
+          Student Organizations
         </Heading>
-      </Box>
-      <Box
-        display="flex"
-        alignItems="flex-start"
-        justifyContent="center"
-        height="auto"
-        marginBottom="50px"
-        data-aos="fade-up"
-        marginTop="50px"
-      >
-        <Stack
-          direction="row"
-          data-aos="fade-in"
-          spacing={8}
-          align="center"
-          fontWeight="300"
+        <Box
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+          justifyContent="center"
+          marginBottom="25px"
+          marginTop="20px"
         >
-          {/* Logos with captions */}
-          {companies.map((company) => (
-            <motion.button
-              key={company.logo}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              style={{
-                background: "none",
-                border: "none",
-                display: "flex",
-                justifyContent: "center",
-              }}
-            >
-              <Link
-                href={company.link}
-                isExternal
-                _hover={{ textDecoration: "none" }}
-              >
-                <Box textAlign="center">
-                  <Image src={company.logo} alt="Company logo" height="50px" />
-                  <Text fontSize="sm" textAlign="center" marginTop="10px">
-                    {company.caption}
-                  </Text>
-                </Box>
-              </Link>
-            </motion.button>
-          ))}
-        </Stack>
-      </Box>
-
-      {/* <Box data-aos="fade-up" marginBottom="25px">
-  <Heading size="md" textAlign="center" fontWeight="100">
-    Campus Involvements
-  </Heading>
-  <Box
-    display="flex"
-    flexDirection="column"
-    alignItems="center"
-    justifyContent="center"
-    marginBottom="25px"
-    marginTop="20px"
-  >
-    <Stack
-      direction="row"
-      data-aos="fade-in"
-      spacing={8}
-      align="center"
-      fontWeight="300"
-    >
-      <motion.button
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        style={{
-          background: "none",
-          border: "none",
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-        <Link
-          href="https://saas.berkeley.edu/"
-          isExternal
-          _hover={{ textDecoration: "none" }}
-        >
-          <Box textAlign="center">
-            <Image
-              src="https://i.ibb.co/s9fVp2p/new-logo.png"
-              alt="SAAS logo"
-              height="50px"
-              width = "100px"
+          <Stack
+            direction="row"
+            data-aos="fade-in"
+            spacing={8}
+            align="center"
+            fontWeight="300"
+          >
+            <ClubCard
+              name="Blockchain at Berkeley"
+              description={babDescription}
+              link="https://blockchain.berkeley.edu/"
+              logo="https://i.ibb.co/dQdstSH/1519869642581.jpg"
             />
-            <Text fontSize="sm" textAlign="center" marginTop="10px">
-              SAAS Berkeley
-            </Text>
-          </Box>
-        </Link>
-      </motion.button>
-      <motion.button
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        style={{
-          background: "none",
-          border: "none",
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-        <Link
-          href="https://blockchain.berkeley.edu/"
-          isExternal
-          _hover={{ textDecoration: "none" }}
-        >
-          <Box textAlign="center">
-            <Image
-              src="https://i.ibb.co/dQdstSH/1519869642581.jpg"
-              alt="SAAS logo"
-              height="50px"
+            <ClubCard
+              name="Students Association of Applied Statistics"
+              description={saasDescription}
+              link="https://saas.berkeley.edu/"
+              logo="https://i.ibb.co/PmG450P/Screenshot-2023-06-27-at-11-56-54-AM.png"
             />
-            <Text fontSize="sm" textAlign="center" marginTop="10px">
-              Blockchain at Berkeley
-            </Text>
-          </Box>
-        </Link>
-      </motion.button>
-    </Stack>
-  </Box> */}
-      {/* </Box> */}
-
-      <Box data-aos="fade-up">
+          </Stack>
+        </Box>
+      </Box>
+      <Box data-aos="fade-up" marginTop = "10vh">
         <Heading size="md" textAlign="center" fontWeight="100">
           Previous Coursework
         </Heading>
@@ -325,8 +215,8 @@ export default function About() {
         justifyContent="center"
         height="auto"
         marginBottom="25px"
-        data-aos="fade-up"
-        marginTop="50px"
+        data-aos="zoom-in"
+        marginTop="5vh"
       >
         <Stack direction="row" spacing={8} align="center">
           {/* Class cards */}

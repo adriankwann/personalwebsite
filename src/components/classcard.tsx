@@ -19,12 +19,16 @@ const ClassCard: React.FC<ClassCardProps> = ({ name, description, link }) => {
       <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
         <Box
           borderWidth="1px"
+          border="1px solid white"
           borderRadius="md"
           p="4"
           mb="4"
           width="30vh"
           minHeight="13vh"
-          overflow="scroll"
+          overflow="none"
+          fontSize="sm"
+          fontWeight="300"
+          boxShadow="lg" // added shadow
         >
           <Heading size="md" mb="2" fontWeight="400">
             {name}

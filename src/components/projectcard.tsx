@@ -46,7 +46,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
   return (
     <Box>
-      <Card maxW="sm" data-aos="fade-up">
+      <Card maxW="sm" data-aos="zoom-out">
         <CardBody>
           <Stack mt="6" spacing="3" align="center" justifyContent="center">
             <Image

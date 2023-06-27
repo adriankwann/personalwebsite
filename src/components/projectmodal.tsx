@@ -8,7 +8,7 @@ import {
   ModalCloseButton,
   Box,
   Link,
-  Spacer,
+  Flex,
   Text,
   Heading,
   Tag,
@@ -57,7 +57,9 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
         <ModalHeader textAlign="center" fontWeight="400">
           Project Display
         </ModalHeader>
-        <Divider orientation="horizontal" />
+        <Flex justifyContent="center">
+          <Divider orientation="horizontal" w="90%" />
+        </Flex>
         <ModalCloseButton />
         <Box marginX={4} textAlign="left" marginTop="20px">
           <Heading size="md" fontWeight="400" marginBottom={2}>

@@ -5,8 +5,9 @@ import {
   Heading,
   Spinner,
   Divider,
+  Flex,
+  Box
 } from "@chakra-ui/react";
-import Head from "next/head";
 import Header from "../components/header";
 import HeroSection from "../components/HeroSection";
 import React, { useState, useEffect } from "react";
@@ -65,17 +66,19 @@ export default function Home() {
         </Center>
       ) : (
         <>
-          <div id="content-wrapper">
-            <Header />
+          <Box maxWidth = "100%" overflowX = "hidden"
+><Header />
             <HeroSection />
             <div id="about-section">
               <About />
             </div>
-            <Divider orientation="horizontal" />
+            <Flex flexDirection="column" alignItems="center">
+            <Divider orientation="horizontal" width = "80%"/>
+            </Flex>
             <div id="projects-section">
               <Projects />
             </div>
-          </div>
+            </Box>            
           <Footer />
         </>
       )}

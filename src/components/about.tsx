@@ -170,7 +170,7 @@ export default function About() {
       </Box>
       <CompaniesSection />
 
-      <Box data-aos="fade-left" marginTop="10vh">
+      <Box data-aos="zoom-in-left" marginTop="10vh">
         <Heading size="md" textAlign="center" fontWeight="100">
           Student Organizations
         </Heading>

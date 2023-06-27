@@ -66,7 +66,7 @@ export default function Home() {
         </Center>
       ) : (
         <>
-          <Box maxWidth="100%" overflowX="hidden">
+          <Box maxWidth="100%" width="100%">
             <Header />
             <HeroSection />
             <div id="about-section">

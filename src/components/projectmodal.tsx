@@ -119,9 +119,9 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
 
           {/* Description Section */}
           <Box marginTop="4" marginBottom="4">
-            <Text fontWeight="500" marginBottom="2">
+            {/* <Text fontWeight="500" marginBottom="2">
               Description:
-            </Text>
+            </Text> */}
             <Text>{longDescription ? longDescription : description}</Text>
           </Box>
           <Divider orientation="horizontal" />

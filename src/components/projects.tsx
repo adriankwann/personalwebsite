@@ -78,6 +78,17 @@ export default function Projects() {
       demo: "",
       longDescription: "",
     },
+    {
+      title: "FlowGPT Collection Feature",
+      description:
+        "Designed and implemented the collection feature for FlowGPT. Similar to spotify playlists for prompts.",
+      image: "https://i.ibb.co/7VGkZXk/Screenshot-2023-06-28-at-3-38-15-PM.png",
+      technologies: ["Prisma", "React", "Next", "Supabase", "tRPC"],
+      association: "FlowGPT",
+      github: "",
+      demo: "",
+      longDescription: "",
+    },
   ];
 
   return (

@@ -79,14 +79,13 @@ export default function HeroSection() {
               <Heading fontWeight="700" fontSize={headingSize}>
                 Welcome to my website!
               </Heading>
-              <Text
-                mt={6}
-                fontSize={{ base: "lg", md: "lg" }}
-                lineHeight="leading-8"
-                className={`text-black ${fade ? "fade-out" : "fade-in"}`}
+              <p
+                className={`mt-6 text-lg leading-8 text-black ${
+                  fade ? "fade-out" : "fade-in"
+                }`}
               >
                 {bulletPoints[currentIndex]}
-              </Text>
+              </p>
               <Box mt={10} data-aos="fade-up">
                 <motion.button
                   whileHover={{ scale: 1.1 }}

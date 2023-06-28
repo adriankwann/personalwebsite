@@ -19,6 +19,7 @@ import "@fontsource/lato/300.css";
 import "@fontsource/lato/400.css";
 import "@fontsource/lato/700.css";
 import "@fontsource-variable/space-grotesk";
+import Head from "next/head";
 
 const theme = extendTheme({
   fonts: {
@@ -48,6 +49,9 @@ export default function Home() {
 
   return (
     <ChakraProvider theme={theme}>
+      <Head>
+        <title>Adrian Kwan</title>
+      </Head>
       {isLoading ? (
         <Center height="100vh" flexDirection="column">
           <Heading

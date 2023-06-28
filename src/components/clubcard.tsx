@@ -27,8 +27,8 @@ const ClubCard: React.FC<ClassCardProps> = ({
 }) => {
   const width = useBreakpointValue({
     base: "90vw",
-    sm: "45vh",
-    md: "40vh",
+    sm: "65vh",
+    md: "55vh",
   });
 
   const imageSize = useBreakpointValue({
@@ -50,48 +50,46 @@ const ClubCard: React.FC<ClassCardProps> = ({
       display="block"
     >
       <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-        <Box
-          border="1px solid white"
-          borderRadius="md"
-          p="4"
-          mb="4"
-          width={width}
-          minHeight="13vh"
-          maxHeight="13vh"
-          overflow="none"
-          position="relative"
-          minH="35vh"
-          boxShadow="lg"
-        >
-          <Flex direction="column" align="center">
-            <Image
-              src={logo}
-              alt={`${name} logo`}
-              width={imageSize}
-              height={imageSize}
-              objectFit="contain"
-              mb="2"
-              mt="1em"
-            />
+      <Box
+  border="1px solid white"
+  borderRadius="md"
+  p="4"
+  mb="4"
+  width={width}
+  minHeight="320px"
+maxHeight="fit-content"
+  height="fit-content"
+  overflow="none"
+  position="relative"
+  boxShadow="lg"
+>
+  <Flex direction="column" align="center" justify="center">
+    <Image
+      src={logo}
+      alt={`${name} logo`}
+      width={imageSize}
+      mb="2"
+      mt="1em"
+    />
 
-            <Heading
-              size={headingSize}
-              mb="2"
-              fontWeight="400"
-              textAlign="center"
-            >
-              {name}
-            </Heading>
-          </Flex>
-          <Text fontWeight="300" mb="1">
-            {description[0]}
-          </Text>
-          <UnorderedList textAlign="left">
-            {description.slice(1).map((item, index) => (
-              <ListItem key={index}>{item}</ListItem>
-            ))}
-          </UnorderedList>
-        </Box>
+    <Heading
+      size={headingSize}
+      mb="2"
+      fontWeight="400"
+      // textAlign="center"
+    >
+      {name}
+    </Heading>
+  </Flex>
+  <Text fontWeight="300" mb="1">
+    {description[0]} 
+  </Text>
+  <UnorderedList textAlign="left">
+    {description.slice(1).map((item, index) => (
+      <ListItem key={index}>{item}</ListItem>
+    ))}
+  </UnorderedList>
+</Box>
       </motion.button>
     </Link>
   );

@@ -52,39 +52,48 @@ const companies = [
 ];
 
 const CompaniesSection = () => {
-  return (
-    <Box data-aos="fade-right">
-      <Heading size="md" textAlign="center" fontWeight="100">
-        Previous Work
-      </Heading>
-      <Box
-        display="flex"
-        flexDirection="column"
-        alignItems="center"
-        justifyContent="center"
-        marginBottom="25px"
-        marginTop="20px"
-      >
-        <Grid
-          templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
-          gap={8}
-          data-aos="fade-in"
-          alignItems="center"
-          fontWeight="300"
+    return (
+      <Box data-aos="fade-right">
+        <Heading
+          size="lg"
+          textAlign="center"
+          fontWeight="100"
+          marginBottom={{ base: "20px", md: "40px" }}
         >
-          {companies.map((company, index) => (
-            <ClubCard
-              key={index}
-              name={company.caption}
-              description={company.description}
-              link={company.link}
-              logo={company.logo}
-            />
-          ))}
-        </Grid>
+          Previous Work
+        </Heading>
+        <Box
+          display="flex"
+          flexDirection="column"
+          alignItems="center" // Ensure the items are centered
+          justifyContent="center"
+          marginBottom="25px"
+          marginTop="40px"
+          width="100%" // Ensure it takes full width
+        >
+          <Grid
+            templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(2, 1fr)" }}
+            gap={8}
+            data-aos="fade-in"
+            alignItems="center" // Center items in the Grid
+            justifyContent="center" // Center items in the Grid
+            fontWeight="300"
+            maxWidth="800px" // Limit the width of the Grid on larger screens
+            width="100%" // Ensure Grid takes full width
+            marginX="auto" // Center the Grid horizontally
+          >
+            {companies.map((company, index) => (
+              <ClubCard
+                key={index}
+                name={company.caption}
+                description={company.description}
+                link={company.link}
+                logo={company.logo}
+              />
+            ))}
+          </Grid>
+        </Box>
       </Box>
-    </Box>
-  );
-};
-
-export default CompaniesSection;
+    );
+  };
+export default CompaniesSection;  

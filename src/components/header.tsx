@@ -6,14 +6,14 @@ import NextLink from "next/link";
 const Header: React.FC = () => {
   return (
     <Box>
-      <header style={headerStyle}>
-        <HStack justifyContent="space-between" width="100%" paddingX={8}>
-          <Box flex="1" textAlign="left">
+      <header style = {headerStyle}>
+        <HStack justifyContent="space-between" width="100%" paddingX={8} zIndex={999}>
+          <Box flex="1" textAlign="left" zIndex="99">
             <Link href="/" _hover={{ textDecoration: "none" }}>
               <h1 style={headingStyle}>Adrian Kwan</h1>
             </Link>
           </Box>
-          <HStack spacing={4}>
+          <HStack spacing={4} zIndex="99">
             <Link href="https://github.com/adriankwann" isExternal>
               <FaGithub size={24} />
             </Link>

@@ -120,12 +120,18 @@ export default function About() {
         marginBottom="25px"
         data-aos="zoom-out-up"
         marginTop="50px"
-        maxWidth="50%"
+        maxWidth={{ base: "90%", sm: "80%", md: "70%", lg: "50%" }}
         marginLeft="auto"
         marginRight="auto"
       >
-        <div style={{ textAlign: "center", marginBottom: "20px" }}>
-          <Text fontSize="2xl" fontWeight="300">
+        <div
+          style={{
+            textAlign: "center",
+            marginBottom: "20px",
+            padding: "0 20px", // Added padding for better readability on smaller screens
+          }}
+        >
+          <Text fontSize={{ base: "xl", md: "2xl" }} fontWeight="300">
             My name is Adrian Kwan and I&apos;m currently studying Computer
             Science @{" "}
             <Text as="em" className="highlight">
@@ -141,7 +147,7 @@ export default function About() {
             </Text>
             .
           </Text>
-          <Text fontSize="2xl" fontWeight="300">
+          <Text fontSize={{ base: "xl", md: "2xl" }} fontWeight="300">
             I&apos;m interested in LLMs, computer vision, zero knowledge proofs,
             and decentralized finance.
           </Text>
@@ -158,6 +164,7 @@ export default function About() {
               borderRadius: "25px",
               padding: "10px 20px",
               justifyContent: "center",
+              minWidth: "150px", // Added minimum width to prevent button from shrinking too much
             }}
             onClick={onOpen}
           >
@@ -168,47 +175,62 @@ export default function About() {
           </motion.button>
         </Box>
       </Box>
+
       <CompaniesSection />
 
-      <Box data-aos="zoom-in-left" marginTop="10vh">
-        <Heading size="md" textAlign="center" fontWeight="100">
-          Student Organizations
-        </Heading>
-        <Box
-          display="flex"
-          flexDirection="column"
-          alignItems="center"
-          justifyContent="center"
-          marginBottom="25px"
-          marginTop="20px"
-        >
-          <Stack
-            direction="row"
-            data-aos="fade-in"
-            spacing={8}
-            align="center"
-            fontWeight="300"
-          >
-            <ClubCard
-              name="Blockchain at Berkeley"
-              description={babDescription}
-              link="https://blockchain.berkeley.edu/"
-              logo="https://i.ibb.co/dQdstSH/1519869642581.jpg"
-            />
-            <ClubCard
-              name="Students Association of Applied Statistics"
-              description={saasDescription}
-              link="https://saas.berkeley.edu/"
-              logo="https://i.ibb.co/PmG450P/Screenshot-2023-06-27-at-11-56-54-AM.png"
-            />
-          </Stack>
-        </Box>
-      </Box>
+      <Box data-aos="zoom-in-left" marginTop={{ base: "5vh", md: "10vh" }}>
+  <Heading
+    size="lg"
+    textAlign="center"
+    fontWeight="100"
+    marginBottom={{ base: "20px", md: "40px" }}
+  >
+    Student Organizations
+  </Heading>
+  <Box
+    display="flex"
+    flexDirection="column"
+    alignItems="center" // Ensure the items are centered
+    justifyContent="center"
+    marginBottom="25px"
+    marginTop="40px"
+    width="100%" // Ensure it takes full width
+  >
+    <Stack
+      direction={{ base: "column", lg: "row" }}
+      data-aos="fade-in"
+      spacing={8}
+      align="center" // Center items in the Stack
+      justify="center" // Center items in the Stack for horizontal centering
+      fontWeight="300"
+      maxWidth="800px" // Limit the width of the Stack on larger screens
+      width="100%" // Ensure Stack takes full width
+      marginX="auto" // Center the Stack horizontally
+    >
+      <ClubCard
+        name="Blockchain at Berkeley"
+        description={babDescription}
+        link="https://blockchain.berkeley.edu/"
+        logo="https://i.ibb.co/dQdstSH/1519869642581.jpg"
+      />
+
+      <ClubCard
+        name="Students Association of Applied Statistics"
+        description={saasDescription}
+        link="https://saas.berkeley.edu/"
+        logo="https://i.ibb.co/PmG450P/Screenshot-2023-06-27-at-11-56-54-AM.png"
+      />
+    </Stack>
+  </Box>
+</Box>
+
+
       <Box data-aos="fade-up" marginTop="10vh">
-        <Heading size="md" textAlign="center" fontWeight="100">
+        <Heading size="lg" textAlign="center" fontWeight="100">
           Previous Coursework
         </Heading>
       </Box>
+
       <Box
         display="flex"
         alignItems="flex-start"
@@ -216,12 +238,23 @@ export default function About() {
         height="auto"
         marginBottom="25px"
         data-aos="zoom-in"
-        marginTop="5vh"
+        marginTop={{ base: "5vh", md: "7vh" }}
       >
-        <Stack direction="row" spacing={8} align="center">
+        <Stack
+          direction={{ base: "column", lg: "row" }}
+          spacing={8}
+          align="center"
+          maxWidth={{ base: "100%", md: "1200px" }} // Added maxWidth to limit the width of the stack on larger screens
+          marginX="auto" // Center the stack horizontally
+        >
           {/* Class cards */}
           {rows.map((row, index) => (
-            <Stack key={index} direction="column" spacing={4}>
+            <Stack
+              key={index}
+              direction="column"
+              spacing={4}
+              width={{ base: "100%", md: "auto" }}
+            >
               {row.map((classItem) => (
                 <ClassCard
                   key={classItem.name}

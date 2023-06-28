@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { VStack, HStack, Box, Heading, useDisclosure } from "@chakra-ui/react";
+import { VStack, HStack, Box, Heading, useDisclosure, SimpleGrid } from "@chakra-ui/react";
 import ProjectCard from "./projectcard";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -76,57 +76,42 @@ export default function Projects() {
 
   return (
     <Box
-      display="flex"
-      alignItems="flex-start" // Align items to the top
-      justifyContent="center"
-      height="auto"
-      marginTop="10vh"
-    >
-      <VStack spacing="20px" align="center">
-        <Heading
-          size="lg"
-          color="transparent"
-          bgGradient="linear-gradient(to right, rgba(29, 211, 189, 0.5), rgba(62, 100, 255, 0.5))"
-          bgClip="text"
-          data-aos="fade-up"
-          fontWeight="700"
-        >
-          Projects
-        </Heading>
-
-        <HStack spacing="20px">
-          {projects.slice(0, 3).map((project, index) => (
-            <ProjectCard
-              key={index}
-              title={project.title}
-              description={project.description}
-              image={project.image}
-              technologies={project.technologies}
-              association={project.association}
-              github={project.github}
-              longDescription={project.longDescription}
-              demo={project.demo}
-            />
-          ))}
-        </HStack>
-        <HStack spacing="20px">
-          {projects.slice(3, 6).map((project, index) => (
-            <ProjectCard
-              key={index}
-              title={project.title}
-              description={project.description}
-              image={project.image}
-              technologies={project.technologies}
-              association={project.association}
-              github={project.github}
-              longDescription={project.longDescription}
-              data-aos="fade-in"
-              data-aos-delay={index * delayStep}
-              demo={project.demo}
-            />
-          ))}
-        </HStack>
-      </VStack>
-    </Box>
+    display="flex"
+    alignItems="flex-start" // Align items to the top
+    justifyContent="center"
+    height="auto"
+    marginTop="10vh"
+  >
+    <VStack spacing="20px" align="center">
+      <Heading
+        size="lg"
+        color="transparent"
+        bgGradient="linear-gradient(to right, rgba(29, 211, 189, 0.5), rgba(62, 100, 255, 0.5))"
+        bgClip="text"
+        data-aos="fade-up"
+        fontWeight="700"
+      >
+        Projects
+      </Heading>
+  
+      <SimpleGrid columns={{ base: 1, lg: 3 }} spacing="20px" >
+        {projects.map((project, index) => (
+          <ProjectCard
+            key={index}
+            title={project.title}
+            description={project.description}
+            image={project.image}
+            technologies={project.technologies}
+            association={project.association}
+            github={project.github}
+            longDescription={project.longDescription}
+            data-aos="fade-in"
+            data-aos-delay={index * delayStep}
+            demo={project.demo}
+          />
+        ))}
+      </SimpleGrid>
+    </VStack>
+  </Box>
   );
 }

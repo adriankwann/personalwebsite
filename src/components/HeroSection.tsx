@@ -7,6 +7,7 @@ import {
   Box,
   Text,
   Button,
+  Stack,
 } from "@chakra-ui/react";
 import { Link as ScrollLink } from "react-scroll";
 import AOS from "aos";
@@ -30,7 +31,7 @@ export default function HeroSection() {
   const scrollLinkStyles = {
     cursor: "pointer",
   };
-  const headingSize = useBreakpointValue({ base: "4xl", md: "6xl" });
+  const headingSize = useBreakpointValue({ base: "100%", md: "6xl" });
   const imageSize = useBreakpointValue({ base: "150px", md: "300px" });
 
   useEffect(() => {
@@ -47,8 +48,8 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <Box className="relative h-[83vh] bg-white">
-      <Box className="relative isolate flex items-center px-6 pt-14 lg:px-8">
+    <Box className="relative h-[60vh]  bg-white sm:h-[38vh] lg:h-[83vh]">
+       <Box className="relative isolate flex flex-col items-start justify-center px-6 pt-14 lg:px-8">
         {/* Background Shape */}
         <div
           className="absolute inset-x-0 -top-20 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-60"
@@ -57,6 +58,7 @@ export default function HeroSection() {
           <div
             className="relative left-[calc(50%-16rem)] aspect-[1155/678] w-[48.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#1dd3bd] to-[#3e64ff] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[96.1875rem]"
             style={{
+              zIndex:"-9999",
               clipPath:
                 "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
             }}
@@ -64,26 +66,28 @@ export default function HeroSection() {
         </div>
 
         {/* Content */}
-        <Box className="mx-auto max-w-7xl py-16 sm:py-32 lg:py-40">
-          <HStack
-            spacing={{ base: 5, md: 20 }}
-            align="start"
-            data-aos="fade-up"
-          >
-            {/* Text content on the left */}
-            <Box className="w-auto pr-8 text-left">
+        <Box className="ml-auto items-start max-w-7xl py-8 sm:py-32 lg:py-40">
+        <Stack
+  direction={{ base: "column", md: "row" }}
+  spacing={{ base: 5, md: 20 }}
+  align={{ base: "center", md: "start" }}
+  justify={{ md: "space-between" }} // Add this line
+  data-aos="fade-up"
+>
+            {/* Text content */}
+            <Box flex="1" pr={{ base: 0, md: 100 }}>
               <Heading fontWeight="700" fontSize={headingSize}>
                 Welcome to my website!
               </Heading>
               <Text
                 mt={6}
-                fontSize={{ base: "md", md: "lg" }}
+                fontSize={{ base: "lg", md: "lg" }}
                 lineHeight="leading-8"
                 className={`text-black ${fade ? "fade-out" : "fade-in"}`}
               >
                 {bulletPoints[currentIndex]}
               </Text>
-              <Box mt={10} data-aos="fade-up">
+               <Box mt={10} data-aos="fade-up" >
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
@@ -120,8 +124,8 @@ export default function HeroSection() {
               </Box>
             </Box>
 
-            {/* Image on the right */}
-            <Box w="1/3" data-aos="fade-up">
+            {/* Image */}
+            <Box flex="1" data-aos="fade-up"> 
               <Image
                 src="https://i.ibb.co/6bYBGDq/IMG-1048-copy.png"
                 alt="Headshot"
@@ -130,7 +134,7 @@ export default function HeroSection() {
                 className="rounded-md"
               />
             </Box>
-          </HStack>
+          </Stack>
         </Box>
       </Box>
 

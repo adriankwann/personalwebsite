@@ -15,6 +15,7 @@ import {
   Wrap,
   Divider,
   Spinner,
+  Image,
 } from "@chakra-ui/react";
 import { StaticImageData } from "next/image";
 import { FaGithub } from "react-icons/fa";
@@ -74,6 +75,12 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
               Personal Project
             </Text>
           )}
+
+          {typeof thumbnailURL === "string" ? (
+            <Box marginTop="20px">
+              <Image src={thumbnailURL} alt="proj image" />
+            </Box>
+          ) : null}
 
           {/* Embedded Video Section */}
           {demo ? (

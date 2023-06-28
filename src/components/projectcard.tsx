@@ -52,7 +52,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         maxW="sm"
         data-aos="zoom-out"
         data-aos-delay={delay}
-        bgGradient="linear-gradient(to right, rgba(29, 211, 189, 0.1), rgba(62, 100, 255, 0))"
+        bgGradient="linear-gradient(to top, rgba(29, 211, 189, 0.1), rgba(62, 100, 255, 0))"
       >
         <CardBody>
           <Stack mt="6" spacing="3" align="center" justifyContent="center">

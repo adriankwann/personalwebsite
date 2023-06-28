@@ -55,7 +55,7 @@ const ClubCard: React.FC<ClassCardProps> = ({
     >
       <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
         <Box
-          border="1px solid white"
+          border="none"
           borderRadius="md"
           p="4"
           mb="4"
@@ -68,6 +68,10 @@ const ClubCard: React.FC<ClassCardProps> = ({
           boxShadow="lg"
           data-aos="fade-right"
           data-aos-delay={delay}
+          style={{
+            backgroundImage:
+              "linear-gradient(to right, rgba(29, 211, 189, 0.1), rgba(62, 100, 255, 0))",
+          }}
         >
           <Flex direction="column" align="center" justify="center">
             <Image

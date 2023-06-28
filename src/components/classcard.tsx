@@ -19,7 +19,6 @@ const ClassCard: React.FC<ClassCardProps> = ({ name, description, link }) => {
       <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
         <Box
           borderWidth="1px"
-          border="1px solid white"
           borderRadius="md"
           p="4"
           mb="4"
@@ -30,6 +29,10 @@ const ClassCard: React.FC<ClassCardProps> = ({ name, description, link }) => {
           fontWeight="300"
           boxShadow="lg" // added shadow
           fontSize="md"
+          style={{
+            background:
+              "linear-gradient(to left, rgba(255, 255, 255, 0), rgba(62, 100, 255, 0.1))",
+          }}
         >
           <Heading size="md" mb="2" fontWeight="400">
             {name}

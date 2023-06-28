@@ -179,51 +179,52 @@ export default function About() {
       <CompaniesSection />
 
       <Box data-aos="zoom-in-left" marginTop={{ base: "5vh", md: "10vh" }}>
-  <Heading
-    size="lg"
-    textAlign="center"
-    fontWeight="100"
-    marginBottom={{ base: "20px", md: "40px" }}
-  >
-    Student Organizations
-  </Heading>
-  <Box
-    display="flex"
-    flexDirection="column"
-    alignItems="center" // Ensure the items are centered
-    justifyContent="center"
-    marginBottom="25px"
-    marginTop="40px"
-    width="100%" // Ensure it takes full width
-  >
-    <Stack
-      direction={{ base: "column", lg: "row" }}
-      data-aos="fade-in"
-      spacing={8}
-      align="center" // Center items in the Stack
-      justify="center" // Center items in the Stack for horizontal centering
-      fontWeight="300"
-      maxWidth="800px" // Limit the width of the Stack on larger screens
-      width="100%" // Ensure Stack takes full width
-      marginX="auto" // Center the Stack horizontally
-    >
-      <ClubCard
-        name="Blockchain at Berkeley"
-        description={babDescription}
-        link="https://blockchain.berkeley.edu/"
-        logo="https://i.ibb.co/dQdstSH/1519869642581.jpg"
-      />
+        <Heading
+          size="lg"
+          textAlign="center"
+          fontWeight="100"
+          marginBottom={{ base: "20px", md: "40px" }}
+        >
+          Student Organizations
+        </Heading>
+        <Box
+          display="flex"
+          flexDirection="column"
+          alignItems="center" // Ensure the items are centered
+          justifyContent="center"
+          marginBottom="25px"
+          marginTop="40px"
+          width="100%" // Ensure it takes full width
+        >
+          <Stack
+            direction={{ base: "column", lg: "row" }}
+            data-aos="fade-in"
+            spacing={8}
+            align="center" // Center items in the Stack
+            justify="center" // Center items in the Stack for horizontal centering
+            fontWeight="300"
+            maxWidth="800px" // Limit the width of the Stack on larger screens
+            width="100%" // Ensure Stack takes full width
+            marginX="auto" // Center the Stack horizontally
+          >
+            <ClubCard
+              name="Blockchain at Berkeley"
+              description={babDescription}
+              link="https://blockchain.berkeley.edu/"
+              logo="https://i.ibb.co/dQdstSH/1519869642581.jpg"
+              delay={100}
+            />
 
-      <ClubCard
-        name="Students Association of Applied Statistics"
-        description={saasDescription}
-        link="https://saas.berkeley.edu/"
-        logo="https://i.ibb.co/PmG450P/Screenshot-2023-06-27-at-11-56-54-AM.png"
-      />
-    </Stack>
-  </Box>
-</Box>
-
+            <ClubCard
+              name="Students Association of Applied Statistics"
+              description={saasDescription}
+              link="https://saas.berkeley.edu/"
+              logo="https://i.ibb.co/PmG450P/Screenshot-2023-06-27-at-11-56-54-AM.png"
+              delay={200}
+            />
+          </Stack>
+        </Box>
+      </Box>
 
       <Box data-aos="fade-up" marginTop="10vh">
         <Heading size="lg" textAlign="center" fontWeight="100">

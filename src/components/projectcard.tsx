@@ -26,6 +26,7 @@ type ProjectCardProps = {
   association: string;
   longDescription: string;
   demo: string;
+  delay: number;
 };
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -37,6 +38,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   association,
   longDescription,
   demo,
+  delay,
 }) => {
   useEffect(() => {
     AOS.init({ duration: 800 });
@@ -46,7 +48,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
   return (
     <Box>
-      <Card maxW="sm" data-aos="zoom-out">
+      <Card maxW="sm" data-aos="zoom-out" data-aos-delay={delay}>
         <CardBody>
           <Stack mt="6" spacing="3" align="center" justifyContent="center">
             <Image

@@ -6,8 +6,13 @@ import NextLink from "next/link";
 const Header: React.FC = () => {
   return (
     <Box>
-      <header style = {headerStyle}>
-        <HStack justifyContent="space-between" width="100%" paddingX={8} zIndex={999}>
+      <header style={headerStyle}>
+        <HStack
+          justifyContent="space-between"
+          width="100%"
+          paddingX={8}
+          zIndex={999}
+        >
           <Box flex="1" textAlign="left" zIndex="99">
             <Link href="/" _hover={{ textDecoration: "none" }}>
               <h1 style={headingStyle}>Adrian Kwan</h1>

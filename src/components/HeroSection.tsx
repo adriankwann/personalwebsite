@@ -49,7 +49,7 @@ export default function HeroSection() {
 
   return (
     <Box className="relative h-[60vh]  bg-white sm:h-[38vh] lg:h-[83vh]">
-       <Box className="relative isolate flex flex-col items-start justify-center px-6 pt-14 lg:px-8">
+      <Box className="relative isolate flex flex-col items-start justify-center px-6 pt-14 lg:px-8">
         {/* Background Shape */}
         <div
           className="absolute inset-x-0 -top-20 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-60"
@@ -58,7 +58,7 @@ export default function HeroSection() {
           <div
             className="relative left-[calc(50%-16rem)] aspect-[1155/678] w-[48.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#1dd3bd] to-[#3e64ff] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[96.1875rem]"
             style={{
-              zIndex:"-9999",
+              zIndex: "-9999",
               clipPath:
                 "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
             }}
@@ -66,14 +66,14 @@ export default function HeroSection() {
         </div>
 
         {/* Content */}
-        <Box className="ml-auto items-start max-w-7xl py-8 sm:py-32 lg:py-40">
-        <Stack
-  direction={{ base: "column", md: "row" }}
-  spacing={{ base: 5, md: 20 }}
-  align={{ base: "center", md: "start" }}
-  justify={{ md: "space-between" }} // Add this line
-  data-aos="fade-up"
->
+        <Box className="ml-auto max-w-7xl items-start py-8 sm:py-32 lg:py-40">
+          <Stack
+            direction={{ base: "column", md: "row" }}
+            spacing={{ base: 5, md: 20 }}
+            align={{ base: "center", md: "start" }}
+            justify={{ md: "space-between" }} // Add this line
+            data-aos="fade-up"
+          >
             {/* Text content */}
             <Box flex="1" pr={{ base: 0, md: 100 }}>
               <Heading fontWeight="700" fontSize={headingSize}>
@@ -87,7 +87,7 @@ export default function HeroSection() {
               >
                 {bulletPoints[currentIndex]}
               </Text>
-               <Box mt={10} data-aos="fade-up" >
+              <Box mt={10} data-aos="fade-up">
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
@@ -125,7 +125,7 @@ export default function HeroSection() {
             </Box>
 
             {/* Image */}
-            <Box flex="1" data-aos="fade-up"> 
+            <Box flex="1" data-aos="fade-up">
               <Image
                 src="https://i.ibb.co/6bYBGDq/IMG-1048-copy.png"
                 alt="Headshot"

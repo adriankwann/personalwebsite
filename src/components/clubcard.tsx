@@ -11,12 +11,15 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 type ClassCardProps = {
   name: string;
   description: string[];
   link: string;
   logo: string;
+  delay: number;
 };
 
 const ClubCard: React.FC<ClassCardProps> = ({
@@ -24,6 +27,7 @@ const ClubCard: React.FC<ClassCardProps> = ({
   description,
   link,
   logo,
+  delay,
 }) => {
   const width = useBreakpointValue({
     base: "90vw",
@@ -50,46 +54,48 @@ const ClubCard: React.FC<ClassCardProps> = ({
       display="block"
     >
       <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-      <Box
-  border="1px solid white"
-  borderRadius="md"
-  p="4"
-  mb="4"
-  width={width}
-  minHeight="320px"
-maxHeight="fit-content"
-  height="fit-content"
-  overflow="none"
-  position="relative"
-  boxShadow="lg"
->
-  <Flex direction="column" align="center" justify="center">
-    <Image
-      src={logo}
-      alt={`${name} logo`}
-      width={imageSize}
-      mb="2"
-      mt="1em"
-    />
+        <Box
+          border="1px solid white"
+          borderRadius="md"
+          p="4"
+          mb="4"
+          width={width}
+          minHeight="320px"
+          maxHeight="fit-content"
+          height="fit-content"
+          overflow="none"
+          position="relative"
+          boxShadow="lg"
+          data-aos="fade-right"
+          data-aos-delay={delay}
+        >
+          <Flex direction="column" align="center" justify="center">
+            <Image
+              src={logo}
+              alt={`${name} logo`}
+              width={imageSize}
+              mb="2"
+              mt="1em"
+            />
 
-    <Heading
-      size={headingSize}
-      mb="2"
-      fontWeight="400"
-      // textAlign="center"
-    >
-      {name}
-    </Heading>
-  </Flex>
-  <Text fontWeight="300" mb="1">
-    {description[0]} 
-  </Text>
-  <UnorderedList textAlign="left">
-    {description.slice(1).map((item, index) => (
-      <ListItem key={index}>{item}</ListItem>
-    ))}
-  </UnorderedList>
-</Box>
+            <Heading
+              size={headingSize}
+              mb="2"
+              fontWeight="400"
+              // textAlign="center"
+            >
+              {name}
+            </Heading>
+          </Flex>
+          <Text fontWeight="300" mb="1">
+            {description[0]}
+          </Text>
+          <UnorderedList textAlign="left">
+            {description.slice(1).map((item, index) => (
+              <ListItem key={index}>{item}</ListItem>
+            ))}
+          </UnorderedList>
+        </Box>
       </motion.button>
     </Link>
   );
